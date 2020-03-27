@@ -5,8 +5,8 @@ cd /tmp && curl -s https://api.github.com/repos/AdguardTeam/AdGuardHome/releases
 tar -xvzf AdGuardHome*.tar.gz -C /root
 rm AdGuardHome*.tar.gz
 
-chmod +x /usr/local/etc/rc.d/adguard
-sysrc 'adguard_enable=YES'
+sudo chmod +x /usr/local/etc/rc.d/adguard
+sudo sysrc 'adguard_enable=YES'
 service adguard start
 
 echo "AdGuard Home is now installed" > /root/PLUGIN_INFO
