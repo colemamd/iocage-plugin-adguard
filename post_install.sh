@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-cd /tmp && curl -s https://api.github.com/repos/AdguardTeam/AdGuardHome/releases/latest | grep "AdguardHome_freebsd_amd64.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi -
+cd /tmp && curl -O https://static.adguard.com/adguardhome/release/AdGuardHome_freebsd_amd64.tar.gz
 tar -xvzf AdGuardHome*.tar.gz -C /root
 rm AdGuardHome*.tar.gz
 
